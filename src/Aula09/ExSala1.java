@@ -23,6 +23,11 @@ public class ExSala1
 		System.out.println("\nArray charracterArray: ");
 		printArray(characterArray);
 		
+		System.out.println("\nMostra da pos 2 a 4 de cada um dos vetores acima: ");
+		printArray(integerArray, 2, 4);
+		printArray(doubleArray, 2, 4);
+		printArray(characterArray, 2, 4);
+		
 		
 		
 
@@ -39,6 +44,16 @@ public class ExSala1
 		
 		System.out.println();
 		
+	}
+	
+	private static < T > void printArray(T[] inputArray, int start, int end)
+	{
+		for (int i = start; i < end; i++)
+		{
+			System.out.printf("%s ", inputArray[i]);
+		}
+		
+		System.out.println();
 	}
 
 }
