@@ -26,7 +26,7 @@ public class ExSala1
 		System.out.println("\nMostra da pos 2 a 4 de cada um dos vetores acima: ");
 		printArray(integerArray, 2, 4);
 		printArray(doubleArray, 2, 4);
-		printArray(characterArray, 2, 4);
+		printArray(characterArray, 2, 10);
 		
 		
 		
@@ -48,12 +48,20 @@ public class ExSala1
 	
 	private static < T > void printArray(T[] inputArray, int start, int end)
 	{
-		for (int i = start; i < end; i++)
+		try
 		{
-			System.out.printf("%s ", inputArray[i]);
+			for (int i = start; i < end; i++)
+			{
+				System.out.printf("%s ", inputArray[i]);
+			}
+			
+			System.out.println();
+		} catch (IndexOutOfBoundsException e)
+		{
+			// TODO Auto-generated catch block
+			System.out.println("Erro, método tenta acessar campo fora do array;");
+			//e.printStackTrace();
 		}
-		
-		System.out.println();
 	}
 
 }
